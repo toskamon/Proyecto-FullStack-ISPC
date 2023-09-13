@@ -39,4 +39,12 @@ class DatabaseConnection:
             print("Conexión cerrada.")
     
     
+        #completar los datos con sus datos personales
     
+connection = DatabaseConnection(
+host='localhost',
+user='root', 
+password='****',
+port='3306',
+database='toska'
+)

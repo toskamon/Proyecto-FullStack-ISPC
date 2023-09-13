@@ -1,11 +1,7 @@
-
+from Enums.Estado import Estado
 class Pedido:
-    def __init__(self, ID_pedido, fecha, ID_usuario, total, Estado):
-        self._ID_pedido = ID_pedido
-        self._fecha = fecha
-        self._ID_usuario = ID_usuario
-        self._total = total
-        self._Estado = Estado
+    def __init__(self):
+        
         self._formas_de_pago = [] 
         
     @property
@@ -33,18 +29,20 @@ class Pedido:
     def total(self,total_nuevo):
         self._total = total_nuevo
         
-    @property
-    def Estado(self):
-        return self._Estado
-    
-    @Estado.setter
-    def Estado(self,Estado_nuevo):
-        self._Estado = Estado_nuevo
+  
         
+    def get_estado(self):
+        return self._estado
+
     
+    def set_estado(self, estado):
+        if isinstance(estado, Estado):
+            self._estado = estado
+        else:
+            raise ValueError("El valor de estado debe ser un objeto de la clase Estado")
         
     
     def __str__(self):
-        return f"PEDIDO(ID:{self.ID_pedido}, Fecha: {self.fecha}, ID_usuario: {self.ID_usuario}, Total: {self.total}, Estado: {self.Estado.value})"
+        return f"PEDIDO(ID:{self.ID_pedido}, Fecha: {self.fecha}, ID_usuario: {self.ID_usuario}, Total: {self.total}, Estado:{self.get_estado().value})"
     
     

@@ -19,3 +19,4 @@ class Tarjeta :
         return f"ID_tarjeta : {self.ID_tarjeta}, NOMBRE DE LA TARJETA: {self.nombre_tarjeta}"
     
         
+        

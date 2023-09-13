@@ -1,10 +1,10 @@
 class Detalle_pedido :
-    def __init__(self,ID_detalle,ID_pedido,ID_producto,cantidad,subtotal):
-        self._ID_detalle = ID_detalle
-        self._ID_pedido = ID_pedido
-        self._ID_producto = ID_producto
-        self._cantidad = cantidad
-        self._subtotal = subtotal
+    
+    def __init__(self) :
+        pass
+        
+         
+       
         
     @property
     def ID_detalle(self):
@@ -30,9 +30,9 @@ class Detalle_pedido :
     def subtotal(self):
         return self._subtotal
     
-    @cantidad.setter
-    def cantidad(self,nueva_cantidad):
-        self._cantidad = nueva_cantidad
+    @subtotal.setter
+    def subtotal(self,nuevo_subtotal):
+        self._subtotal = nuevo_subtotal
         
     def __str__(self):
         return f"DETALLE DEL PEDIDO : ID: {self.ID_detalle},ID DEL PEDIDO: {self.ID_pedido}, ID DEL PRODUCTO: {self.ID_producto}, Cantidad comprada: {self.cantidad}, Subtotal: {self.subtotal}"
