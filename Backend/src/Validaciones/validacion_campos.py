@@ -6,9 +6,9 @@ def validacion_campo(args):
     
 def validacion_caracter(args,campo):
     if not args.isalpha():
-     raise ValueError(f"El {campo}  deben contener solo caracteres")
+     raise ValueError(f"El campo {campo}  deben contener solo caracteres")
  
  
 def validacion_numero(args,campo):
     if args <= 0:
-        raise ValueError(f"El {campo} debe contener solo números")
+        raise ValueError(f"El campo {campo} debe contener solo números")
