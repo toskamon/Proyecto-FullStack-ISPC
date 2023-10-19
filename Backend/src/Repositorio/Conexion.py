@@ -23,7 +23,7 @@ class DatabaseConnection:
             
             self.cursor = self.connection.cursor()
             
-            print("Conexión exitosa a la base de datos.")
+           
         except mysql.connector.Error as error:
             print("No se pudo establecer la conexión: {}".format(error))
             
@@ -34,17 +34,18 @@ class DatabaseConnection:
     def close(self):
         if self.cursor:
             self.cursor.close()
+            
         if self.connection:
             self.connection.close()
-            print("Conexión cerrada.")
+            
     
     
-        #completar los datos con sus datos personales
+    #completar los datos con sus datos personales
     
 connection = DatabaseConnection(
 host='localhost',
 user='root', 
 password='root',
 port='3306',
-database='toska'
+database='campeones_del_mundo'
 )

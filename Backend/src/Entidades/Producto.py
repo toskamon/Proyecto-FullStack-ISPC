@@ -40,3 +40,5 @@ class Producto:
         return f"Producto(ID: {self.ID_producto}, Nombre del producto: {self.nombre_producto}, Descripcion: {self.descripcion}, Precio: {self.precio})"
         
         
+    
+        
